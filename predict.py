@@ -30,8 +30,8 @@ def predict_img(model, img_path):
     index = output.data.cpu().numpy().argmax()
     return data_class[index]
 
-weights_path = './drive/My Drive/weights.pth'
-img_path = './drive/My Drive/test/paper9.jpg'
+weights_path = input()
+img_path = input()
 
 model = recreate_model(weights_path)
 predict_img(model, img_path)
